@@ -17,6 +17,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --profile optimized --verbose
     - name: Run tests
       run: cargo test --verbose
+    - name: Extract Artifacts
+      uses: actions/upload-artifact@v2
+      with: 
+        name: assets-for-download
+        path: target
