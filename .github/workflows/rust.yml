@@ -23,5 +23,5 @@ jobs:
     - name: Extract Artifacts
       uses: actions/upload-artifact@v2
       with: 
-        name: assets-for-download
-        path: target
+        name: monero-vanity
+        path: target/optimized/monero-vanity
